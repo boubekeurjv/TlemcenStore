@@ -1,0 +1,32 @@
+hydrostudia/
+├── server.js
+├── package.json
+├── .env
+├── models/
+│   ├── User.js
+│   ├── Product.js
+│   ├── Order.js
+│   ├── Cart.js
+├── routes/
+│   ├── auth.js
+│   ├── products.js
+│   ├── cart.js
+│   ├── orders.js
+├── middleware/
+│   └── auth.js
+├── config/
+│   └── db.js
+├── public/
+│   ├── index.html
+│   ├── services.html
+│   ├── shop.html
+│   ├── contact.html
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── cart.js
+│   │   └── invoice.js
+│   └── assets/
+│       └── images/
+└── ...
