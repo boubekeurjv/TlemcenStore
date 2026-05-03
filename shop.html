@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HydroStudia | Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <header class="navbar" id="navbar"></header>
+  <main>
+    <div class="container">
+      <h2 class="section-title" data-key="shop_title">Hydraulic equipment store</h2>
+      <div class="shop-layout">
+        <div class="products-grid" id="productsGrid"></div>
+        <div class="cart-sidebar">
+          <h3><i class="fas fa-shopping-cart"></i> <span data-key="your_cart">Your cart</span></h3>
+          <div id="cartItemsList"></div>
+          <div id="cartTotal" class="cart-total">Total: 0 DZD</div>
+          <button class="btn-primary" id="generateInvoiceBtn" style="width:100%;"><i class="fas fa-file-invoice"></i> <span data-key="proforma_invoice">Proforma invoice</span></button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+
+  <!-- Modal لـ HDPE pipe -->
+  <div id="hdpeModal" class="modal">
+    <div class="modal-content">
+      <h3>Add HDPE Pipe</h3>
+      <div class="form-group"><label>Diameter:</label><select id="hdpeDiameter"></select></div>
+      <div class="form-group"><label>Pressure:</label><select id="hdpePressure"></select></div>
+      <div class="form-group"><label>Meters:</label><input type="number" id="hdpeMeters" min="1" value="10"></div>
+      <button id="confirmHdpeBtn" class="btn-primary">Add to cart</button>
+      <button id="closeHdpeModal" class="btn-outline">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Modal لبيانات العميل للفاتورة -->
+  <div id="clientModal" class="modal">
+    <div class="modal-content">
+      <h3 data-key="invoice_details">Proforma invoice details</h3>
+      <div class="form-group"><input type="text" id="clientName" placeholder="Client name / Company"></div>
+      <div class="form-group"><input type="tel" id="clientPhone" placeholder="Phone number"></div>
+      <div class="form-group"><input type="email" id="clientEmail" placeholder="Email"></div>
+      <button id="confirmInvoiceBtn" class="btn-primary"><span data-key="generate_pdf">Generate PDF invoice</span></button>
+      <button id="closeModalBtn" class="btn-outline"><span data-key="cancel">Cancel</span></button>
+    </div>
+  </div>
+
+  <a href="https://wa.me/213778335282" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/invoice.js"></script>
+</body>
+</html>
